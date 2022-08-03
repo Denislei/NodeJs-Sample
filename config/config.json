@@ -1,0 +1,20 @@
+{
+    "development": {
+        "config_id": "development",
+        "app_name": "Presidential Suite Booking",
+        "app_desc": "Demo for Presidential Suite Booking",
+        "node_port": 8088,
+        "json_indentation": 4,
+        "disableDebug": false,
+        "dbFile": "./assets/db/config.json"
+    },
+    "testing": {
+        "config_id": "testing"
+    },
+    "staging": {
+        "config_id": "staging"
+    },
+    "production": {
+        "config_id": "production"
+    }
+}

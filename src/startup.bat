@@ -1,0 +1,3 @@
+node .\myServer.js
+
+pause ..................
