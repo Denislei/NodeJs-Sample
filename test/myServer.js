@@ -7,7 +7,7 @@ chai.should();
 chai.use(chaiHttp);
 
 describe('Room booking APIs', () => {
-  describe('Test GET route, failed when empty', () => {
+  describe('Test GET route, failed when database empty', () => {
     it("Should return error, when get nonexist id", () => {
       chai.request(server)
           .get('/get/0_2022-08-01')
@@ -123,7 +123,7 @@ describe('Room booking APIs', () => {
     })
   })
 
-  describe('Test Add two bookings to the different rooms with overlapped, Successfully', () => {
+  describe('Test Add two bookings to the different rooms with overlapped date, Successfully', () => {
     it("Should return success, when add normal", () => {
       chai.request(server)
           .post('/add')

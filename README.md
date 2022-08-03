@@ -47,6 +47,27 @@ Solution: Provide REST APIs for
             "content": {}
         }    
 
+2. Get endpoint for retrieving, http://localhost:8088/get/0_2022-08-11
+    Response example:
+        {
+            "status": "200",
+            "message": "",
+            "content":    {
+                "email": "test@domain.com",
+                "firstName": "First",
+                "lastName": "Last",
+                "number": 1,
+                "start": "2022-08-11",
+                "end": "2022-08-12"
+            }
+        }
+    Error response example:
+        {
+            "status": "400",
+            "message": "Room ID not found: 0_2022-08-01",
+            "content": {}
+        }
+
 3. Get endpoint for cancelling, http://localhost:8088/cancel/0_2022-08-06
     Response example:
         {
@@ -67,7 +88,7 @@ Solution: Provide REST APIs for
 2. The storage is file based, loaded into memory and persistenced automatically, with small footprint
 3. To startup the server, go to the directory /src, and run
     startup.bat
-4. Initially, need to reset the rooms and capacity, in the db file, /src/assets/db/config.json, as
+4. Initially, need to reset the rooms and capacity, in the db file, /src/assets/db/config.json, such as
     {
         "capacity": 10
     }
@@ -75,7 +96,7 @@ Solution: Provide REST APIs for
 ### Tests
 
 1. Unit test cases
-    - Test GET route, failed when empty
+    - Test GET route, failed when database empty
         /get/0_2022-08-01
         /cancel/0_2022-08-01
     - Test normal Add, Get and Cancel route, Successfully
@@ -83,7 +104,7 @@ Solution: Provide REST APIs for
         /get/0_2022-08-01
         /cancel/0_2022-08-01
     - Test Add two bookings to the same room with different date, Successfully
-    - Test Add two bookings to the different rooms with overlapped, Successfully
+    - Test Add two bookings to the different rooms with overlapped date, Successfully
     - Negative test Add, Failed with wrong input
         Empty payload
         More than 3 people
