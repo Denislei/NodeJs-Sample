@@ -4,7 +4,7 @@ Problem:
     After the contagious pandemic is over, Panoramic Hotel is now accepting booking of its only
     presidential suite. You are going to design and develop a back-end service to provide the REST APIs to
     manage the booking of the presidential suite. Each booking allows up to 3 people for up to 3 days.
-    
+
 Solution: Provide REST APIs for
 1. Booking the presidential suite. The user provides the following:
     • Email, first name and last name of the principal guest
@@ -63,7 +63,7 @@ Solution: Provide REST APIs for
 
 ## Developing
 
-1. This a NodeJs base REST service for room reservation
+1. This a NodeJs based REST service for room reservation
 2. The storage is file based, loaded into memory and persistenced automatically, with small footprint
 3. To startup the server, go to the directory /src, and run
     startup.bat
@@ -72,4 +72,21 @@ Solution: Provide REST APIs for
         "capacity": 10
     }
 
-### Tools
+### Tests
+
+1. Unit test cases
+    - Test GET route, failed when empty
+        /get/0_2022-08-01
+        /cancel/0_2022-08-01
+    - Test normal Add, Get and Cancel route, Successfully
+        /add, with normal payload
+        /get/0_2022-08-01
+        /cancel/0_2022-08-01
+    - Test Add two bookings to the same room with different date, Successfully
+    - Test Add two bookings to the different rooms with overlapped, Successfully
+    - Negative test Add, Failed with wrong input
+        Empty payload
+        More than 3 people
+        Longer than 3 days
+2. To run the unit, go to the project root directory, and run
+    test.bat

@@ -1,0 +1,26 @@
+2022-08-03 14:27:24.825 [VideoMaker] info: Winston logger is starting......
+2022-08-03 14:27:24.835 [VideoMaker] error: Winston logger is starting......
+2022-08-03 14:27:24.836 [VideoMaker] info: Loading.....
+2022-08-03 14:27:24.836 [VideoMaker] info: Project Configuration: {"config_id":"development","app_name":"Presidential Suite Booking","app_desc":"Demo for Presidential Suite Booking","node_port":8088,"json_indentation":4,"disableDebug":false,"dbFile":"./assets/db/config.json"}
+2022-08-03 14:27:24.836 [VideoMaker] info: App root: E:\Denis\Work\Bell\NodeServer\src
+2022-08-03 14:27:24.837 [VideoMaker] info: Booking Database: {"capacity":10,"rooms":{"0":[],"1":[]}}
+2022-08-03 14:27:24.840 [VideoMaker] info: ========== NodeJs app listening at http://localhost:8088
+2022-08-03 14:27:45.036 [VideoMaker] info: >>>>>Get room Entering....../get/2_2022-08-06
+2022-08-03 14:27:45.038 [VideoMaker] info: request parameters: {"id":"2_2022-08-06"}
+2022-08-03 14:27:45.039 [VideoMaker] info: request parameters id: 2,2022-08-06
+2022-08-03 14:27:45.043 [VideoMaker] info: <<<<<Successfully Get Sent ......
+2022-08-03 14:27:51.407 [VideoMaker] info: >>>>>Post booking Entering....
+2022-08-03 14:27:51.408 [VideoMaker] info: request parameters: {}
+2022-08-03 14:27:51.408 [VideoMaker] debug: booking: {"email":"test@domain.com","firstName":"First","lastName":"Last","number":1,"start":"2022-08-11","end":"2022-08-12"}
+2022-08-03 14:27:51.408 [VideoMaker] info: Days: 1
+2022-08-03 14:27:51.408 [VideoMaker] info: Booking Database: {"capacity":10,"rooms":{"0":[{"email":"test@domain.com","firstName":"First","lastName":"Last","number":1,"start":"2022-08-11","end":"2022-08-12"}],"1":[]}}
+2022-08-03 14:27:51.410 [VideoMaker] info: <<<<<Successfully Add Sent ......
+2022-08-03 14:28:07.166 [VideoMaker] info: >>>>>Get room Entering....../get/0_2022-08-11
+2022-08-03 14:28:07.166 [VideoMaker] info: request parameters: {"id":"0_2022-08-11"}
+2022-08-03 14:28:07.167 [VideoMaker] info: request parameters id: 0,2022-08-11
+2022-08-03 14:28:07.167 [VideoMaker] info: <<<<<Successfully Get Sent ......
+2022-08-03 14:28:15.582 [VideoMaker] info: >>>>>Remove room Entering....../cancel/0_2022-08-11
+2022-08-03 14:28:15.583 [VideoMaker] info: request parameters: {"id":"0_2022-08-11"}
+2022-08-03 14:28:15.583 [VideoMaker] info: request parameters id: 0,2022-08-11
+2022-08-03 14:28:15.584 [VideoMaker] info: Booking Database: {"capacity":10,"rooms":{"0":[],"1":[]}}
+2022-08-03 14:28:15.585 [VideoMaker] info: <<<<<Successfully Remove Sent ......

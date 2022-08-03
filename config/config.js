@@ -1,5 +1,5 @@
 const lodash = require('lodash');
-//require('./logger-file.js');
+require('./logger-file.js');
 
 // module variables
 console.log('Loading.....');

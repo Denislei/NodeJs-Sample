@@ -32,6 +32,8 @@ app.use(morgan(format, { stream: accessLogStream }))
 //Config variables
 require('../config/config.js');
 const appRoot = __dirname;
+console.log('App root: ' + appRoot);
+
 const appName = global.gConfig.app_name;
 const port = global.gConfig.node_port;
 
@@ -216,10 +218,10 @@ function checkMissing(variable, name, message) {
 function saveConfigJson(){
   console.log('Booking Database: ' + JSON.stringify(dbFile));
 
-  fs.writeFileSync(global.gConfig.dbFile, JSON.stringify(dbFile, null, global.gConfig.json_indentation));
+  fs.writeFileSync(appRoot + "/" + global.gConfig.dbFile, JSON.stringify(dbFile, null, global.gConfig.json_indentation));
 }
 
 //Start the server listening
-app.listen(port, () => {
+module.exports = app.listen(port, () => {
   console.log(`========== NodeJs app listening at http://localhost:${port}`)
 })
